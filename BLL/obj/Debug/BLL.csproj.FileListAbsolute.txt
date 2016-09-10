@@ -1,0 +1,11 @@
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\BLL\bin\Debug\BLL.dll
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\BLL\bin\Debug\BLL.pdb
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\BLL\bin\Debug\DAL.dll
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\BLL\bin\Debug\Model.dll
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\BLL\bin\Debug\Util.dll
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\BLL\bin\Debug\DAL.pdb
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\BLL\bin\Debug\Model.pdb
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\BLL\bin\Debug\Util.pdb
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\BLL\obj\Debug\BLL.dll
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\BLL\obj\Debug\BLL.pdb

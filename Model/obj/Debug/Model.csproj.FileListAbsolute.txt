@@ -1,0 +1,7 @@
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\Model\bin\Debug\Model.dll
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\Model\bin\Debug\Model.pdb
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\Model\obj\Debug\Model.dll
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\Model\obj\Debug\Model.pdb
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\Model\bin\Debug\Util.dll
+\\Mac\Home\Documents\ErpDebora\crud_sem_orm\Model\bin\Debug\Util.pdb
