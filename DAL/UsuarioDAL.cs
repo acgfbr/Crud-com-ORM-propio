@@ -144,6 +144,8 @@ namespace DAL
                                        ,#USUARIO
                                        ,#SENHA)
                             GO";
+
+            return true;
         }
 
     }

@@ -3,3 +3,8 @@
 \\Mac\Home\Documents\ErpDebora\crud_sem_orm\Util\obj\Debug\Util.csprojResolveAssemblyReference.cache
 \\Mac\Home\Documents\ErpDebora\crud_sem_orm\Util\obj\Debug\Util.dll
 \\Mac\Home\Documents\ErpDebora\crud_sem_orm\Util\obj\Debug\Util.pdb
+C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\Util\bin\Debug\Util.dll
+C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\Util\bin\Debug\Util.pdb
+C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\Util\obj\Debug\Util.csprojResolveAssemblyReference.cache
+C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\Util\obj\Debug\Util.dll
+C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\Util\obj\Debug\Util.pdb

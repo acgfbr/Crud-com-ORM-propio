@@ -37,26 +37,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuarioForm));
             this.tabControlUsuario = new System.Windows.Forms.TabControl();
             this.tabBusca = new System.Windows.Forms.TabPage();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBusca = new System.Windows.Forms.Button();
             this.tbBusca = new System.Windows.Forms.TextBox();
             this.tabCadastro = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gpbox = new System.Windows.Forms.GroupBox();
             this.tbID = new System.Windows.Forms.TextBox();
-            this.ckativo = new System.Windows.Forms.CheckBox();
+            this.tbNome = new System.Windows.Forms.TextBox();
+            this.tbSenha = new System.Windows.Forms.TextBox();
+            this.tbUsuario = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
-            this.tbEmail = new System.Windows.Forms.TextBox();
-            this.tbUsuario = new System.Windows.Forms.TextBox();
-            this.tbSenha = new System.Windows.Forms.TextBox();
-            this.tbNome = new System.Windows.Forms.TextBox();
             this.bsUsuario = new System.Windows.Forms.BindingSource(this.components);
             this.bsDatagrid = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
             label5 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
@@ -64,13 +63,13 @@
             label6 = new System.Windows.Forms.Label();
             this.tabControlUsuario.SuspendLayout();
             this.tabBusca.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabCadastro.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.gpbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsDatagrid)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -156,6 +155,15 @@
             this.tabBusca.Text = "Consulta";
             this.tabBusca.UseVisualStyleBackColor = true;
             // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView.Location = new System.Drawing.Point(3, 76);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(994, 613);
+            this.dataGridView.TabIndex = 5;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label1);
@@ -210,7 +218,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.groupBox2);
+            this.groupBox3.Controls.Add(this.gpbox);
             this.groupBox3.Controls.Add(this.btnExcluir);
             this.groupBox3.Controls.Add(this.btnEditar);
             this.groupBox3.Controls.Add(this.btnSalvar);
@@ -224,6 +232,25 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dados do Usuário";
             // 
+            // gpbox
+            // 
+            this.gpbox.Controls.Add(label5);
+            this.gpbox.Controls.Add(this.tbID);
+            this.gpbox.Controls.Add(this.tbNome);
+            this.gpbox.Controls.Add(label6);
+            this.gpbox.Controls.Add(this.tbSenha);
+            this.gpbox.Controls.Add(label3);
+            this.gpbox.Controls.Add(this.tbUsuario);
+            this.gpbox.Controls.Add(label7);
+            this.gpbox.Controls.Add(this.tbEmail);
+            this.gpbox.Controls.Add(label8);
+            this.gpbox.Enabled = false;
+            this.gpbox.Location = new System.Drawing.Point(6, 34);
+            this.gpbox.Name = "gpbox";
+            this.gpbox.Size = new System.Drawing.Size(519, 108);
+            this.gpbox.TabIndex = 163;
+            this.gpbox.TabStop = false;
+            // 
             // tbID
             // 
             this.tbID.Enabled = false;
@@ -234,102 +261,17 @@
             this.tbID.Size = new System.Drawing.Size(93, 22);
             this.tbID.TabIndex = 0;
             // 
-            // ckativo
+            // tbNome
             // 
-            this.ckativo.AutoSize = true;
-            this.ckativo.Checked = true;
-            this.ckativo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckativo.Enabled = false;
-            this.ckativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckativo.Location = new System.Drawing.Point(521, 82);
-            this.ckativo.Name = "ckativo";
-            this.ckativo.Size = new System.Drawing.Size(110, 20);
-            this.ckativo.TabIndex = 8;
-            this.ckativo.Text = "Registro ativo";
-            this.ckativo.UseVisualStyleBackColor = true;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Enabled = false;
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
-            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExcluir.Location = new System.Drawing.Point(571, 148);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 58);
-            this.btnExcluir.TabIndex = 11;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Enabled = false;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditar.Location = new System.Drawing.Point(490, 148);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 58);
-            this.btnEditar.TabIndex = 10;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Enabled = false;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalvar.Location = new System.Drawing.Point(409, 148);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 58);
-            this.btnSalvar.TabIndex = 9;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
-            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNovo.Location = new System.Drawing.Point(328, 148);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(75, 58);
-            this.btnNovo.TabIndex = 12;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNovo.UseVisualStyleBackColor = true;
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.Enabled = false;
-            this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.Location = new System.Drawing.Point(315, 38);
-            this.tbEmail.MaxLength = 200;
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(197, 22);
-            this.tbEmail.TabIndex = 3;
-            // 
-            // tbUsuario
-            // 
-            this.tbUsuario.Enabled = false;
-            this.tbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUsuario.Location = new System.Drawing.Point(6, 82);
-            this.tbUsuario.MaxLength = 200;
-            this.tbUsuario.Name = "tbUsuario";
-            this.tbUsuario.Size = new System.Drawing.Size(251, 22);
-            this.tbUsuario.TabIndex = 4;
+            this.tbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNome.Location = new System.Drawing.Point(102, 38);
+            this.tbNome.MaxLength = 200;
+            this.tbNome.Name = "tbNome";
+            this.tbNome.Size = new System.Drawing.Size(209, 22);
+            this.tbNome.TabIndex = 1;
             // 
             // tbSenha
             // 
-            this.tbSenha.Enabled = false;
             this.tbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSenha.Location = new System.Drawing.Point(264, 82);
             this.tbSenha.MaxLength = 200;
@@ -338,43 +280,86 @@
             this.tbSenha.Size = new System.Drawing.Size(251, 22);
             this.tbSenha.TabIndex = 6;
             // 
-            // tbNome
+            // tbUsuario
             // 
-            this.tbNome.Enabled = false;
-            this.tbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNome.Location = new System.Drawing.Point(102, 38);
-            this.tbNome.MaxLength = 200;
-            this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(209, 22);
-            this.tbNome.TabIndex = 1;
+            this.tbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsuario.Location = new System.Drawing.Point(6, 82);
+            this.tbUsuario.MaxLength = 200;
+            this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.Size = new System.Drawing.Size(251, 22);
+            this.tbUsuario.TabIndex = 4;
             // 
-            // groupBox2
+            // tbEmail
             // 
-            this.groupBox2.Controls.Add(label5);
-            this.groupBox2.Controls.Add(this.tbID);
-            this.groupBox2.Controls.Add(this.tbNome);
-            this.groupBox2.Controls.Add(label6);
-            this.groupBox2.Controls.Add(this.ckativo);
-            this.groupBox2.Controls.Add(this.tbSenha);
-            this.groupBox2.Controls.Add(label3);
-            this.groupBox2.Controls.Add(this.tbUsuario);
-            this.groupBox2.Controls.Add(label7);
-            this.groupBox2.Controls.Add(this.tbEmail);
-            this.groupBox2.Controls.Add(label8);
-            this.groupBox2.Location = new System.Drawing.Point(6, 34);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(640, 108);
-            this.groupBox2.TabIndex = 163;
-            this.groupBox2.TabStop = false;
+            this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmail.Location = new System.Drawing.Point(315, 38);
+            this.tbEmail.MaxLength = 200;
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(197, 22);
+            this.tbEmail.TabIndex = 3;
             // 
-            // dataGridView
+            // btnExcluir
             // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView.Location = new System.Drawing.Point(3, 76);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(994, 613);
-            this.dataGridView.TabIndex = 5;
+            this.btnExcluir.Enabled = false;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExcluir.Location = new System.Drawing.Point(449, 148);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 58);
+            this.btnExcluir.TabIndex = 11;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Enabled = false;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditar.Location = new System.Drawing.Point(368, 148);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 58);
+            this.btnEditar.TabIndex = 10;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Enabled = false;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSalvar.Location = new System.Drawing.Point(287, 148);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 58);
+            this.btnSalvar.TabIndex = 9;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
+            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNovo.Location = new System.Drawing.Point(206, 148);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(75, 58);
+            this.btnNovo.TabIndex = 12;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // UsuarioForm
             // 
@@ -387,15 +372,15 @@
             this.Text = "Cadastro de Usuário";
             this.tabControlUsuario.ResumeLayout(false);
             this.tabBusca.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabCadastro.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.gpbox.ResumeLayout(false);
+            this.gpbox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsDatagrid)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -411,7 +396,6 @@
         private System.Windows.Forms.TabPage tabCadastro;
         private System.Windows.Forms.GroupBox groupBox3;
         public System.Windows.Forms.TextBox tbID;
-        public System.Windows.Forms.CheckBox ckativo;
         public System.Windows.Forms.Button btnExcluir;
         public System.Windows.Forms.Button btnEditar;
         public System.Windows.Forms.Button btnSalvar;
@@ -422,7 +406,7 @@
         public System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.BindingSource bsUsuario;
         private System.Windows.Forms.BindingSource bsDatagrid;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gpbox;
         private System.Windows.Forms.DataGridView dataGridView;
     }
 }
