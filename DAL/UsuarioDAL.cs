@@ -128,7 +128,23 @@ namespace DAL
             return lst_usuarios;
         }
 
+        public bool Store(Usuario usr, bool isInsert)
+        {
+            var query = @"USE [tone]
+                            GO
 
+                            INSERT INTO [dbo].[usuario]
+                                       ([nome]
+                                       ,[email]
+                                       ,[usuario]
+                                       ,[senha])
+                                 VALUES
+                                       (#NOME
+                                       ,#EMAIL
+                                       ,#USUARIO
+                                       ,#SENHA)
+                            GO";
+        }
 
     }
 }
