@@ -144,6 +144,11 @@ namespace DAL
                                        ,#USUARIO
                                        ,#SENHA)
                             GO";
+<<<<<<< HEAD
+=======
+
+            return true;
+>>>>>>> origin/master
         }
 
     }

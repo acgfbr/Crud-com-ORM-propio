@@ -16,6 +16,9 @@ namespace UI
 {
     public partial class UsuarioForm : Form
     {
+        protected internal List<Validation> otherValidations;
+        protected internal Validation validation;
+
         public void CreateBaseGrid()
         {
             DataGridViewCellStyle gridViewCellStyle = new DataGridViewCellStyle();
@@ -106,6 +109,36 @@ namespace UI
             }
         }
 
+        protected internal void clearValidation()
+        {
+            if (validation != null)
+                validation.Free();
+            if (otherValidations != null && otherValidations.Count > 0)
+            {
+                foreach (Validation item in otherValidations)
+                {
+                    item.Free();
+                }
+            }
+        }
+
+        public Validation Validacao()
+        {
+            this.Validate(); //chama a validação do formulario
+            this.clearValidation();
+            var v = new Validation();
+
+            v.validateText(tbNome, " Um nome deve ser especificado! ");
+            v.validateText(tbEmail, " Um email deve ser especificado! ");
+            v.validateText(tbUsuario, " Um usuário deve ser especificado! ");
+            v.validateText(tbSenha, " Uma senha deve ser especificada! ");
+
+            v.setFocus();
+            if (otherValidations == null)
+                otherValidations = new List<Validation>();
+            otherValidations.Add(v);
+            return v;
+        }
         public UsuarioForm()
         {
             InitializeComponent();
@@ -121,6 +154,55 @@ namespace UI
         {
             var lst = string.IsNullOrEmpty(tbBusca.Text) ? new UsuarioBLL().ListAll() : new UsuarioBLL().ListByNome(tbBusca.Text);
             bsDatagrid.DataSource = lst;
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            if (btnNovo.Text.Equals("Cancelar"))
+            {
+                btnSalvar.Enabled = false;
+                btnEditar.Enabled = false;
+                btnExcluir.Enabled = false;
+
+                gpbox.Enabled = false;
+
+                btnNovo.Text = "Novo";
+
+                bsUsuario.AddNew();
+            }
+            else if (btnNovo.Text.Equals("Novo"))
+            {
+                btnSalvar.Enabled = true;
+                btnEditar.Enabled = false;
+                btnExcluir.Enabled = true;
+
+                gpbox.Enabled = true;
+
+                btnNovo.Text = "Cancelar";
+
+                bsUsuario.AddNew();
+            }
+
+            
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            var validation = Validacao();
+
+            if (validation.IsValid)
+            {
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
