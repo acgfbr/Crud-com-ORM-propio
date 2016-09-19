@@ -21,3 +21,6 @@ Y:\Documents\ErpDebora\crud_sem_orm\UI\obj\Debug\UI.pdb
 Y:\Documents\Crud-sem-ORM\UI\bin\Debug\UI.exe.config
 Y:\Documents\Crud-sem-ORM\UI\obj\Debug\UI.exe
 Y:\Documents\Crud-sem-ORM\UI\obj\Debug\UI.pdb
+\\Mac\Home\Documents\Crud-sem-ORM\UI\bin\Debug\UI.exe.config
+\\Mac\Home\Documents\Crud-sem-ORM\UI\obj\Debug\UI.exe
+\\Mac\Home\Documents\Crud-sem-ORM\UI\obj\Debug\UI.pdb
