@@ -10,7 +10,7 @@ using Util;
 
 namespace DAL
 {
-    public class UsuarioDAL
+    public class UsuarioDAL : BaseDAL
     {
         private readonly ToneHelper toneHelper;
 
@@ -144,11 +144,8 @@ namespace DAL
                                        ,#USUARIO
                                        ,#SENHA)
                             GO";
-<<<<<<< HEAD
-=======
-
             return true;
->>>>>>> origin/master
+
         }
 
     }

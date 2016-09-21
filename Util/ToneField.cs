@@ -23,4 +23,8 @@ namespace Util
         }
     }
 
+    public class VARIAVEL_IGNORADA_BASE_DAL : Attribute
+    {
+    }
+
 }

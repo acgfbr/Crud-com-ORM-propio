@@ -158,6 +158,13 @@ namespace UI
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
+            var usr = new Usuario();
+            usr.usuario = "teste";
+            usr.email = "teste1";
+            usr.senha = "teste2";
+            usr.nome= "blau";
+            var dal = new UsuarioBLL();
+            dal.Store(usr);
             if (btnNovo.Text.Equals("Cancelar"))
             {
                 btnSalvar.Enabled = false;

@@ -7,12 +7,12 @@
 \\Mac\Home\Documents\ErpDebora\crud_sem_orm\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 \\Mac\Home\Documents\ErpDebora\crud_sem_orm\DAL\obj\Debug\DAL.dll
 \\Mac\Home\Documents\ErpDebora\crud_sem_orm\DAL\obj\Debug\DAL.pdb
-C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\DAL\obj\Debug\DAL.dll
-C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\DAL\obj\Debug\DAL.pdb
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\DAL\bin\Debug\DAL.dll
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\DAL\bin\Debug\DAL.pdb
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\DAL\bin\Debug\Model.dll
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\DAL\bin\Debug\Util.dll
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\DAL\bin\Debug\Model.pdb
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\DAL\bin\Debug\Util.pdb
+C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\DAL\obj\Debug\DAL.dll
+C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\DAL\obj\Debug\DAL.pdb

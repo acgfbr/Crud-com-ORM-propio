@@ -48,8 +48,8 @@ namespace BLL
             usuario.email = usuario.email.ToLower();
 
             var usuarioDAL = new UsuarioDAL();
-            //return usuarioDAL.Store(usuario);
-            return false;
+            return usuarioDAL.SaveOrUpdate(usuario, usuario.id==0);
+            
         }
         public bool Delete(int _id)
         {
