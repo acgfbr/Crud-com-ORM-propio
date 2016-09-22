@@ -37,3 +37,7 @@ C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\UI\obj\Debug\UI.pdb
 \\Mac\Home\Documents\Crud-sem-ORM\UI\obj\Debug\UI.csproj.GenerateResource.Cache
 \\Mac\Home\Documents\Crud-sem-ORM\UI\obj\Debug\UI.exe
 \\Mac\Home\Documents\Crud-sem-ORM\UI\obj\Debug\UI.pdb
+C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\UI\obj\Debug\UI.CategoriaForm.resources
+C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\UI\obj\Debug\UI.LoteForm.resources
+C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\UI\obj\Debug\UI.MarcaForm.resources
+C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\UI\obj\Debug\UI.ProdutoForm.resources

@@ -11,8 +11,8 @@ namespace Util
 {
     public class ToneHelper
     {
-        //public static string sqlConnectionString = "Data Source=192.168.1.18;Initial Catalog=tone;Persist Security Info=True;User ID=sa;Password=tuamae;Max Pool Size=300;";
-        public static string sqlConnectionString = @"Server=TONE-PC\SQLEXPRESS;Database=tone;Trusted_Connection=True;";
+        public static string sqlConnectionString = "Data Source=192.168.1.18;Initial Catalog=tone;Persist Security Info=True;User ID=sa;Password=pt66ypjx;Max Pool Size=300;";
+        //public static string sqlConnectionString = @"Server=TONE-PC\SQLEXPRESS;Database=tone;Trusted_Connection=True;";
         
 
         public SqlConnection BdConnection { get; set; }

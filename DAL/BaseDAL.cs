@@ -65,7 +65,7 @@ namespace DAL
             }
             else
             {
-                var id = classe.GetType().GetProperty("codigo").GetValue(classe, null);
+                var id = PropertyValue.GetPropertyValue(classe, "codigo");
 
                 var updatequery = string.Empty;
                 

@@ -97,6 +97,9 @@
     <EmbeddedResource Include="MarcaForm.resx">
       <DependentUpon>MarcaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProdutoForm.resx">
+      <DependentUpon>ProdutoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -112,6 +115,7 @@
     <None Include="Properties\DataSources\Model.CategoriaModel.datasource" />
     <None Include="Properties\DataSources\Model.LoteModel.datasource" />
     <None Include="Properties\DataSources\Model.MarcaModel.datasource" />
+    <None Include="Properties\DataSources\Model.ProdutoModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
