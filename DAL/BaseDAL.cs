@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Util;
@@ -36,36 +38,71 @@ namespace DAL
             return new Tuple<List<SqlParameter>, string, string>(parameters, nome_variaveis, nome_valores);
         }
 
-        
 
-        public bool SaveOrUpdate<T>(T classe, bool isInsert)
+        public bool Delete(string nometabela, int codigo)
+        {
+            var query = "delete from " + nometabela + " where codigo = " + codigo;
+            var help = new ToneHelper();
+            help.ExecuteNonQuery(query);
+            return true;
+        }
+
+        public bool SaveOrUpdate<T>(T classe, bool isInsert, string nometabela)
         {
             var tupla = Cria_Parametros(isInsert ? 1 : 0, classe);
             var parameters = tupla.Item1;
-            var vars = tupla.Item2;
+            var variaveis = tupla.Item2;
             var valores = tupla.Item3;
-            vars = vars.TrimEnd(',');
+            variaveis = variaveis.TrimEnd(',');
             valores = valores.TrimEnd(',');
 
             if (isInsert)
             {
-                var query = "insert into " + classe.GetType().Name.ToLower() + " (" + vars + " ) values ( "+valores+" )";
+                var query = "insert into " + nometabela + " (" + variaveis + " ) values ( "+valores+" )";
 
                 var help = new ToneHelper();
                 help.ExecuteNonQuery(query, parameters.ToArray());
                 return true;
-                
             }
             else
             {
-                return false;
+                var id = classe.GetType().GetProperty("codigo").GetValue(classe, null);
+
+                var updatequery = string.Empty;
+                
+                var vars = variaveis.Split(',');
+                var parametros = valores.Split(',');
+
+                var i = 0;
+                foreach (var item in vars)
+                {
+                    updatequery = item + " = " + parametros[i];
+                    i ++;
+                }
+                var query = "update " + nometabela + " set "+updatequery+ " where codigo = #ID#";
+                query = query.Replace("#ID#", id.ToString());
+                
+                var help = new ToneHelper();
+                help.ExecuteNonQuery(query, parameters.ToArray());
+                return true;
             }
-            
         }
 
-        
+        public List<T> GetGeneric<T>(string query) where T : class, new()
+        {
+            var data_table = new DataTable();
+            var toneHelper = new ToneHelper();
+            toneHelper.OpenConnection();
+            toneHelper.command.CommandText = query;
+            using (var t = new SqlDataAdapter(toneHelper.command))
+            {
+                t.Fill(data_table);
+            }
+            toneHelper.CloseConection();
+            
+            return toneHelper.DataTableToList<T>(data_table);
+        }
 
-        
         public void Dispose()
         {
             GC.Collect();

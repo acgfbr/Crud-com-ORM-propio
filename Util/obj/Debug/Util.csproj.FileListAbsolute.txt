@@ -8,3 +8,7 @@ C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\Util\bin\Debug\Util.pdb
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\Util\obj\Debug\Util.csprojResolveAssemblyReference.cache
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\Util\obj\Debug\Util.dll
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\Util\obj\Debug\Util.pdb
+\\Mac\Home\Documents\Crud-sem-ORM\Util\bin\Debug\Util.dll
+\\Mac\Home\Documents\Crud-sem-ORM\Util\bin\Debug\Util.pdb
+\\Mac\Home\Documents\Crud-sem-ORM\Util\obj\Debug\Util.dll
+\\Mac\Home\Documents\Crud-sem-ORM\Util\obj\Debug\Util.pdb

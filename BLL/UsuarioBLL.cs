@@ -48,7 +48,7 @@ namespace BLL
             usuario.email = usuario.email.ToLower();
 
             var usuarioDAL = new UsuarioDAL();
-            return usuarioDAL.SaveOrUpdate(usuario, usuario.id==0);
+            return usuarioDAL.SaveOrUpdate(usuario, usuario.id==0,"usuario");
             
         }
         public bool Delete(int _id)

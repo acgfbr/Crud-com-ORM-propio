@@ -11,8 +11,8 @@ namespace Util
 {
     public class ToneHelper
     {
-        public static string sqlConnectionString = "Data Source=192.168.1.18;Initial Catalog=tone;Persist Security Info=True;User ID=sa;Password=tuamae;Max Pool Size=300;";
-        //public static string sqlConnectionString = @"Server=TONE-PC\SQLEXPRESS;Database=tone;Trusted_Connection=True;";
+        //public static string sqlConnectionString = "Data Source=192.168.1.18;Initial Catalog=tone;Persist Security Info=True;User ID=sa;Password=tuamae;Max Pool Size=300;";
+        public static string sqlConnectionString = @"Server=TONE-PC\SQLEXPRESS;Database=tone;Trusted_Connection=True;";
         
 
         public SqlConnection BdConnection { get; set; }
@@ -127,7 +127,37 @@ namespace Util
                 throw erro;
             }
         }
+        public List<T> DataTableToList<T>(DataTable table) where T : class, new()
+        {
+            try
+            {
+                var list = new List<T>();
 
-        
+                foreach (var row in table.AsEnumerable())
+                {
+                    var obj = new T();
+
+                    foreach (var prop in obj.GetType().GetProperties())
+                    {
+                        try
+                        {
+                            var propertyInfo = obj.GetType().GetProperty(prop.Name);
+                            propertyInfo.SetValue(obj, Convert.ChangeType(row[prop.Name], propertyInfo.PropertyType), null);
+                        }
+                        catch(Exception ex)
+                        {
+                            continue;
+                        }
+                    }
+                    list.Add(obj);
+                }
+                return list;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
     }
 }

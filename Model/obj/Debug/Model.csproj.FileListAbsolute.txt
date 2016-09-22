@@ -12,3 +12,10 @@ C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\Model\bin\Debug\Util.pdb
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\Model\obj\Debug\Model.dll
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\Model\obj\Debug\Model.pdb
+\\Mac\Home\Documents\Crud-sem-ORM\Model\bin\Debug\Model.dll
+\\Mac\Home\Documents\Crud-sem-ORM\Model\bin\Debug\Model.pdb
+\\Mac\Home\Documents\Crud-sem-ORM\Model\bin\Debug\Util.dll
+\\Mac\Home\Documents\Crud-sem-ORM\Model\bin\Debug\Util.pdb
+\\Mac\Home\Documents\Crud-sem-ORM\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Crud-sem-ORM\Model\obj\Debug\Model.dll
+\\Mac\Home\Documents\Crud-sem-ORM\Model\obj\Debug\Model.pdb

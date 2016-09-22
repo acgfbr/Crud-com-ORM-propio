@@ -16,3 +16,12 @@ C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\DAL\bin\Debug\Util.pdb
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\DAL\obj\Debug\DAL.dll
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\DAL\obj\Debug\DAL.pdb
+\\Mac\Home\Documents\Crud-sem-ORM\DAL\bin\Debug\DAL.dll
+\\Mac\Home\Documents\Crud-sem-ORM\DAL\bin\Debug\DAL.pdb
+\\Mac\Home\Documents\Crud-sem-ORM\DAL\bin\Debug\Model.dll
+\\Mac\Home\Documents\Crud-sem-ORM\DAL\bin\Debug\Util.dll
+\\Mac\Home\Documents\Crud-sem-ORM\DAL\bin\Debug\Model.pdb
+\\Mac\Home\Documents\Crud-sem-ORM\DAL\bin\Debug\Util.pdb
+\\Mac\Home\Documents\Crud-sem-ORM\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Crud-sem-ORM\DAL\obj\Debug\DAL.dll
+\\Mac\Home\Documents\Crud-sem-ORM\DAL\obj\Debug\DAL.pdb
