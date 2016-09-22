@@ -13,7 +13,7 @@ namespace DAL
 {
     public class BaseDAL : IDisposable
     {
-        public Tuple<List<SqlParameter>, string, string> Cria_Parametros<T>(int i, T classe)
+        public Tuple<List<SqlParameter>, string, string> Cria_Parametros<T>(T classe)
         {
             var nome_variaveis = string.Empty;
             var nome_valores = string.Empty;
@@ -25,8 +25,7 @@ namespace DAL
 
             var lst_without_atribs = props.Except(ignored).ToList();
 
-            if (i == 1)
-                lst_without_atribs.RemoveAt(0);
+            lst_without_atribs.RemoveAt(0);
 
             foreach (var item in lst_without_atribs)
             {
@@ -49,7 +48,7 @@ namespace DAL
 
         public bool SaveOrUpdate<T>(T classe, bool isInsert, string nometabela)
         {
-            var tupla = Cria_Parametros(isInsert ? 1 : 0, classe);
+            var tupla = Cria_Parametros(classe);
             var parameters = tupla.Item1;
             var variaveis = tupla.Item2;
             var valores = tupla.Item3;
@@ -76,7 +75,11 @@ namespace DAL
                 var i = 0;
                 foreach (var item in vars)
                 {
-                    updatequery = item + " = " + parametros[i];
+                    if(i < vars.Length-1)
+                        updatequery += item + " = " + parametros[i] +  ", ";
+                    else
+                        updatequery += item + " = " + parametros[i] + " ";
+
                     i ++;
                 }
                 var query = "update " + nometabela + " set "+updatequery+ " where codigo = #ID#";

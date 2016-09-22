@@ -150,6 +150,7 @@
             this.btnBusca.TabIndex = 14;
             this.btnBusca.Text = "Busca";
             this.btnBusca.UseVisualStyleBackColor = true;
+            this.btnBusca.Click += new System.EventHandler(this.btnBusca_Click);
             // 
             // tbBusca
             // 
