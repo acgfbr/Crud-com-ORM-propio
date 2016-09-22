@@ -23,7 +23,7 @@ namespace UI
             v.validateText(tbNroLote, " Um numero do lote deve ser informado !  ");
             v.validateText(tbQtde, " Uma quantidade do lote deve ser informada !  ");
             v.validateText(dtpVcto, " Uma data de vencimento do lote deve ser informada !  ");
-
+            asd
             v.setFocus();
             if (otherValidations == null)
                 otherValidations = new List<Validation>();
