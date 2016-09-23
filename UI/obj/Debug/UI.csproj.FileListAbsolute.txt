@@ -12,7 +12,6 @@ C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\UI\bin\Debug\DAL.pdb
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\UI\obj\Debug\UI.BaseForm.resources
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\UI\obj\Debug\UI.Properties.Resources.resources
-C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\UI\obj\Debug\UI.UsuarioForm.resources
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\UI\obj\Debug\UI.csproj.GenerateResource.Cache
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\UI\obj\Debug\UI.exe
 C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\UI\obj\Debug\UI.pdb
@@ -63,3 +62,5 @@ Z:\Users\tonepanetone\Documents\Crud-sem-ORM\UI\obj\Debug\UI.ProdutoForm.resourc
 Z:\Users\tonepanetone\Documents\Crud-sem-ORM\UI\obj\Debug\UI.Properties.Resources.resources
 Z:\Users\tonepanetone\Documents\Crud-sem-ORM\UI\obj\Debug\UI.UsuarioForm.resources
 Z:\Users\tonepanetone\Documents\Crud-sem-ORM\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\UI\obj\Debug\UI.MainForm.resources
+C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\UI\obj\Debug\SISLand.UI.MenuForm.resources

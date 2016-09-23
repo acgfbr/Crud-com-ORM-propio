@@ -33,7 +33,6 @@
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label3;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProdutoForm));
             System.Windows.Forms.Label label4;
             System.Windows.Forms.Label label6;
             System.Windows.Forms.Label label7;
@@ -41,6 +40,8 @@
             System.Windows.Forms.Label label9;
             System.Windows.Forms.Label label10;
             System.Windows.Forms.Label label11;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProdutoForm));
+            System.Windows.Forms.Label label13;
             this.tbID = new System.Windows.Forms.TextBox();
             this.tbDescricao = new System.Windows.Forms.TextBox();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
@@ -51,17 +52,20 @@
             this.cbLote = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.bsProduto = new System.Windows.Forms.BindingSource(this.components);
             this.cbLoteBusca = new System.Windows.Forms.ComboBox();
             this.cbMarcaBusca = new System.Windows.Forms.ComboBox();
             this.cbCategoriaBusca = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.checkLote = new System.Windows.Forms.CheckBox();
             this.checkMarca = new System.Windows.Forms.CheckBox();
             this.checkCategoria = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkVcto = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbTotal = new System.Windows.Forms.TextBox();
+            this.bsProduto = new System.Windows.Forms.BindingSource(this.components);
+            this.dtpFim = new System.Windows.Forms.DateTimePicker();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tbQtde = new System.Windows.Forms.TextBox();
             label5 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -73,11 +77,16 @@
             label9 = new System.Windows.Forms.Label();
             label10 = new System.Windows.Forms.Label();
             label11 = new System.Windows.Forms.Label();
+            label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bsDatagrid)).BeginInit();
             this.groupFiltros.SuspendLayout();
             this.gpbBase.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsProduto)).BeginInit();
             this.SuspendLayout();
+            // 
+            // bsDatagrid
+            // 
+            this.bsDatagrid.CurrentChanged += new System.EventHandler(this.bsDatagrid_CurrentChanged);
             // 
             // btnExcluir
             // 
@@ -97,14 +106,18 @@
             // 
             // groupFiltros
             // 
+            this.groupFiltros.Controls.Add(this.label14);
+            this.groupFiltros.Controls.Add(this.tbQtde);
+            this.groupFiltros.Controls.Add(label13);
+            this.groupFiltros.Controls.Add(this.dtpFim);
             this.groupFiltros.Controls.Add(this.label12);
-            this.groupFiltros.Controls.Add(this.textBox3);
-            this.groupFiltros.Controls.Add(this.checkBox1);
+            this.groupFiltros.Controls.Add(this.tbTotal);
+            this.groupFiltros.Controls.Add(this.checkVcto);
             this.groupFiltros.Controls.Add(this.checkCategoria);
             this.groupFiltros.Controls.Add(this.checkMarca);
             this.groupFiltros.Controls.Add(this.checkLote);
             this.groupFiltros.Controls.Add(label11);
-            this.groupFiltros.Controls.Add(this.dateTimePicker1);
+            this.groupFiltros.Controls.Add(this.dtpInicio);
             this.groupFiltros.Controls.Add(label8);
             this.groupFiltros.Controls.Add(this.cbLoteBusca);
             this.groupFiltros.Controls.Add(label9);
@@ -174,6 +187,76 @@
             label3.TabIndex = 186;
             label3.Text = "Marca";
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label4.Location = new System.Drawing.Point(486, 91);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(34, 16);
+            label4.TabIndex = 188;
+            label4.Text = "Lote";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label6.Location = new System.Drawing.Point(668, 42);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(77, 16);
+            label6.TabIndex = 190;
+            label6.Text = "Valor Custo";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label7.Location = new System.Drawing.Point(815, 42);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(83, 16);
+            label7.TabIndex = 192;
+            label7.Text = "Valor Venda";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label8.Location = new System.Drawing.Point(370, 78);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(34, 16);
+            label8.TabIndex = 194;
+            label8.Text = "Lote";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label9.Location = new System.Drawing.Point(188, 78);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(46, 16);
+            label9.TabIndex = 192;
+            label9.Text = "Marca";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label10.Location = new System.Drawing.Point(6, 78);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(67, 16);
+            label10.TabIndex = 190;
+            label10.Text = "Categoria";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label11.Location = new System.Drawing.Point(549, 78);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(161, 16);
+            label11.TabIndex = 196;
+            label11.Text = "Vencimento do Lote Início";
+            // 
             // tbID
             // 
             this.tbID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsProduto, "codigo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -230,7 +313,7 @@
             // 
             this.btnBusca.Image = ((System.Drawing.Image)(resources.GetObject("btnBusca.Image")));
             this.btnBusca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBusca.Location = new System.Drawing.Point(552, 41);
+            this.btnBusca.Location = new System.Drawing.Point(370, 41);
             this.btnBusca.Name = "btnBusca";
             this.btnBusca.Size = new System.Drawing.Size(141, 32);
             this.btnBusca.TabIndex = 14;
@@ -242,18 +325,8 @@
             // 
             this.tbBusca.Location = new System.Drawing.Point(9, 46);
             this.tbBusca.Name = "tbBusca";
-            this.tbBusca.Size = new System.Drawing.Size(537, 22);
+            this.tbBusca.Size = new System.Drawing.Size(355, 22);
             this.tbBusca.TabIndex = 13;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label4.Location = new System.Drawing.Point(486, 91);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(34, 16);
-            label4.TabIndex = 188;
-            label4.Text = "Lote";
             // 
             // cbLote
             // 
@@ -276,16 +349,6 @@
             this.textBox1.Size = new System.Drawing.Size(138, 22);
             this.textBox1.TabIndex = 189;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label6.Location = new System.Drawing.Point(668, 42);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(77, 16);
-            label6.TabIndex = 190;
-            label6.Text = "Valor Custo";
-            // 
             // textBox2
             // 
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsProduto, "valor_venda", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -295,30 +358,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(138, 22);
             this.textBox2.TabIndex = 191;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label7.Location = new System.Drawing.Point(815, 42);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(83, 16);
-            label7.TabIndex = 192;
-            label7.Text = "Valor Venda";
-            // 
-            // bsProduto
-            // 
-            this.bsProduto.DataSource = typeof(Model.ProdutoModel);
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label8.Location = new System.Drawing.Point(370, 78);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(34, 16);
-            label8.TabIndex = 194;
-            label8.Text = "Lote";
             // 
             // cbLoteBusca
             // 
@@ -331,16 +370,6 @@
             this.cbLoteBusca.Size = new System.Drawing.Size(173, 23);
             this.cbLoteBusca.TabIndex = 193;
             // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label9.Location = new System.Drawing.Point(188, 78);
-            label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(46, 16);
-            label9.TabIndex = 192;
-            label9.Text = "Marca";
-            // 
             // cbMarcaBusca
             // 
             this.cbMarcaBusca.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bsProduto, "codigo_marca", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
@@ -351,16 +380,6 @@
             this.cbMarcaBusca.Name = "cbMarcaBusca";
             this.cbMarcaBusca.Size = new System.Drawing.Size(173, 23);
             this.cbMarcaBusca.TabIndex = 191;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label10.Location = new System.Drawing.Point(6, 78);
-            label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(67, 16);
-            label10.TabIndex = 190;
-            label10.Text = "Categoria";
             // 
             // cbCategoriaBusca
             // 
@@ -373,23 +392,13 @@
             this.cbCategoriaBusca.Size = new System.Drawing.Size(173, 23);
             this.cbCategoriaBusca.TabIndex = 189;
             // 
-            // dateTimePicker1
+            // dtpInicio
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(552, 98);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(149, 22);
-            this.dateTimePicker1.TabIndex = 195;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label11.Location = new System.Drawing.Point(549, 78);
-            label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(127, 16);
-            label11.TabIndex = 196;
-            label11.Text = "Vencimento do Lote";
+            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpInicio.Location = new System.Drawing.Point(552, 98);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Size = new System.Drawing.Size(149, 22);
+            this.dtpInicio.TabIndex = 195;
             // 
             // checkLote
             // 
@@ -421,32 +430,72 @@
             this.checkCategoria.Text = "Usar Filtro de Categoria";
             this.checkCategoria.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // checkVcto
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(552, 126);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(137, 20);
-            this.checkBox1.TabIndex = 200;
-            this.checkBox1.Text = "Usar Filtro de Vcto";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkVcto.AutoSize = true;
+            this.checkVcto.Location = new System.Drawing.Point(552, 126);
+            this.checkVcto.Name = "checkVcto";
+            this.checkVcto.Size = new System.Drawing.Size(137, 20);
+            this.checkVcto.TabIndex = 200;
+            this.checkVcto.Text = "Usar Filtro de Vcto";
+            this.checkVcto.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(704, 75);
+            this.label12.Location = new System.Drawing.Point(514, 24);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(206, 16);
             this.label12.TabIndex = 202;
             this.label12.Text = "Valor Total do Estoque da Busca";
             // 
-            // textBox3
+            // tbTotal
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(707, 97);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(232, 22);
-            this.textBox3.TabIndex = 201;
+            this.tbTotal.Enabled = false;
+            this.tbTotal.Location = new System.Drawing.Point(517, 46);
+            this.tbTotal.Name = "tbTotal";
+            this.tbTotal.Size = new System.Drawing.Size(232, 22);
+            this.tbTotal.TabIndex = 201;
+            // 
+            // bsProduto
+            // 
+            this.bsProduto.DataSource = typeof(Model.ProdutoModel);
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label13.Location = new System.Drawing.Point(706, 78);
+            label13.Name = "label13";
+            label13.Size = new System.Drawing.Size(152, 16);
+            label13.TabIndex = 204;
+            label13.Text = "Vencimento do Lote Fim";
+            // 
+            // dtpFim
+            // 
+            this.dtpFim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFim.Location = new System.Drawing.Point(709, 98);
+            this.dtpFim.Name = "dtpFim";
+            this.dtpFim.Size = new System.Drawing.Size(149, 22);
+            this.dtpFim.TabIndex = 203;
+            this.dtpFim.Value = new System.DateTime(2016, 10, 23, 13, 33, 0, 0);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(752, 24);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(136, 16);
+            this.label14.TabIndex = 206;
+            this.label14.Text = "Qtde itens do produto";
+            // 
+            // tbQtde
+            // 
+            this.tbQtde.Enabled = false;
+            this.tbQtde.Location = new System.Drawing.Point(755, 46);
+            this.tbQtde.Name = "tbQtde";
+            this.tbQtde.Size = new System.Drawing.Size(232, 22);
+            this.tbQtde.TabIndex = 205;
             // 
             // ProdutoForm
             // 
@@ -482,12 +531,15 @@
         private System.Windows.Forms.ComboBox cbLoteBusca;
         private System.Windows.Forms.ComboBox cbMarcaBusca;
         private System.Windows.Forms.ComboBox cbCategoriaBusca;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpInicio;
         private System.Windows.Forms.CheckBox checkCategoria;
         private System.Windows.Forms.CheckBox checkMarca;
         private System.Windows.Forms.CheckBox checkLote;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkVcto;
         public System.Windows.Forms.Label label12;
-        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox tbTotal;
+        private System.Windows.Forms.DateTimePicker dtpFim;
+        public System.Windows.Forms.Label label14;
+        public System.Windows.Forms.TextBox tbQtde;
     }
 }

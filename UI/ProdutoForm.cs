@@ -45,6 +45,18 @@ namespace UI
             cbLote.DataSource = new LoteBLL().Get("");
             cbLote.ValueMember = "codigo";
             cbLote.DisplayMember = "nro_lote";
+
+            cbCategoriaBusca.DataSource = new CategoriaBLL().Get("");
+            cbCategoriaBusca.ValueMember = "codigo";
+            cbCategoriaBusca.DisplayMember = "descricao";
+
+            cbMarcaBusca.DataSource = new MarcaBLL().Get("");
+            cbMarcaBusca.ValueMember = "codigo";
+            cbMarcaBusca.DisplayMember = "descricao";
+
+            cbLoteBusca.DataSource = new LoteBLL().Get("");
+            cbLoteBusca.ValueMember = "codigo";
+            cbLoteBusca.DisplayMember = "nro_lote";
         }
 
         public ProdutoForm()
@@ -57,6 +69,9 @@ namespace UI
             dataGridView.Columns[0].Width = 65;
 
             dataGridView.CellDoubleClick += DataGridView_CellDoubleClick;
+
+
+            
         }
         private void DataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -127,8 +142,19 @@ namespace UI
 
         private void btnBusca_Click(object sender, EventArgs e)
         {
-            var lst = new ProdutoBLL().Get(tbBusca.Text);
+            var lst = new ProdutoBLL().Get(tbBusca.Text, checkCategoria.Checked, checkMarca.Checked, checkLote.Checked, (int)cbCategoriaBusca.SelectedValue, (int)cbMarcaBusca.SelectedValue, (int)cbLoteBusca.SelectedValue, checkVcto.Checked, dtpInicio.Value, dtpFim.Value);
             bsDatagrid.DataSource = lst;
+        }
+
+        private void bsDatagrid_CurrentChanged(object sender, EventArgs e)
+        {
+            var current = bsDatagrid.Current as ProdutoModel;
+            if (current != null)
+            {
+                var totalizadores = new ProdutoBLL().GetTotalEstoqueBusca(current.codigo);
+                tbTotal.Text = totalizadores.total.ToString();
+                tbQtde.Text = totalizadores.qtde.ToString();
+            }
         }
     }
 }
