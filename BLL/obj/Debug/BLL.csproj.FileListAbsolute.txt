@@ -31,3 +31,14 @@ C:\Users\Agily18\Documents\GitHub\Crud-sem-ORM\BLL\obj\Debug\BLL.pdb
 \\Mac\Home\Documents\Crud-sem-ORM\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 \\Mac\Home\Documents\Crud-sem-ORM\BLL\obj\Debug\BLL.dll
 \\Mac\Home\Documents\Crud-sem-ORM\BLL\obj\Debug\BLL.pdb
+Z:\Users\tonepanetone\Documents\Crud-sem-ORM\BLL\bin\Debug\BLL.dll
+Z:\Users\tonepanetone\Documents\Crud-sem-ORM\BLL\bin\Debug\BLL.pdb
+Z:\Users\tonepanetone\Documents\Crud-sem-ORM\BLL\bin\Debug\DAL.dll
+Z:\Users\tonepanetone\Documents\Crud-sem-ORM\BLL\bin\Debug\Model.dll
+Z:\Users\tonepanetone\Documents\Crud-sem-ORM\BLL\bin\Debug\Util.dll
+Z:\Users\tonepanetone\Documents\Crud-sem-ORM\BLL\bin\Debug\DAL.pdb
+Z:\Users\tonepanetone\Documents\Crud-sem-ORM\BLL\bin\Debug\Model.pdb
+Z:\Users\tonepanetone\Documents\Crud-sem-ORM\BLL\bin\Debug\Util.pdb
+Z:\Users\tonepanetone\Documents\Crud-sem-ORM\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+Z:\Users\tonepanetone\Documents\Crud-sem-ORM\BLL\obj\Debug\BLL.dll
+Z:\Users\tonepanetone\Documents\Crud-sem-ORM\BLL\obj\Debug\BLL.pdb
