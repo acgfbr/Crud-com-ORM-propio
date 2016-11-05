@@ -1,3 +1,3 @@
-# Crud-sem-ORM
+# Crud com meu propio ORM.
 
-trabalho do zukini, entregar sexta 23/09/2016
+Feito 100% com reflection escaneando os models e gerando o crud automaticamente com reflection.
